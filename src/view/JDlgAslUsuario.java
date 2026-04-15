@@ -29,19 +29,19 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTxtIdUsuario = new javax.swing.JTextField();
+        jTxtAslIdUsuario = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTxtNome = new javax.swing.JTextField();
+        jTxtAslNome = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTxtAslApelido = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jFmtDataDeNascimento = new javax.swing.JFormattedTextField();
-        jCboNivel = new javax.swing.JComboBox<>();
+        jFmtAslDataDeNascimento = new javax.swing.JFormattedTextField();
+        jCboAslNivel = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jChbAtivo = new javax.swing.JCheckBox();
-        jChbAtivo2 = new javax.swing.JCheckBox();
+        jChbAslAtivo = new javax.swing.JCheckBox();
+        jChbAslAtivo2 = new javax.swing.JCheckBox();
         jBtnIncluir = new javax.swing.JButton();
         jBtnAlterar = new javax.swing.JButton();
         jBtnExcluir = new javax.swing.JButton();
@@ -60,19 +60,20 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
 
         jLabel4.setText("Data de Nascimento");
 
-        jFmtDataDeNascimento.addActionListener(this::jFmtDataDeNascimentoActionPerformed);
+        jFmtAslDataDeNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        jFmtAslDataDeNascimento.addActionListener(this::jFmtAslDataDeNascimentoActionPerformed);
 
-        jCboNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 - Admin", "2 - Financeiro", "3 - Vendedor", "4 - Gerente" }));
-        jCboNivel.addActionListener(this::jCboNivelActionPerformed);
+        jCboAslNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 - Admin", "2 - Financeiro", "3 - Vendedor", "4 - Gerente" }));
+        jCboAslNivel.addActionListener(this::jCboAslNivelActionPerformed);
 
         jLabel5.setText("Nível");
 
         jLabel6.setText("Ativo");
 
-        jChbAtivo.setText("S");
-        jChbAtivo.addActionListener(this::jChbAtivoActionPerformed);
+        jChbAslAtivo.setText("S");
+        jChbAslAtivo.addActionListener(this::jChbAslAtivoActionPerformed);
 
-        jChbAtivo2.setText("N");
+        jChbAslAtivo2.setText("N");
 
         jBtnIncluir.setMnemonic('I');
         jBtnIncluir.setText("Incluir");
@@ -102,19 +103,19 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTxtIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTxtAslIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTxtAslNome, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTxtAslApelido, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jFmtDataDeNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jFmtAslDataDeNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,11 +124,11 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
                                 .addGap(68, 68, 68)
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCboNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jCboAslNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jChbAtivo)
+                                .addComponent(jChbAslAtivo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jChbAtivo2))))
+                                .addComponent(jChbAslAtivo2))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jBtnIncluir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -152,9 +153,9 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
                     .addComponent(jLabel3))
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTxtAslIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtAslNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtAslApelido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -162,10 +163,10 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jFmtDataDeNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCboNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jChbAtivo)
-                    .addComponent(jChbAtivo2))
+                    .addComponent(jFmtAslDataDeNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCboAslNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jChbAslAtivo)
+                    .addComponent(jChbAslAtivo2))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnIncluir)
@@ -180,17 +181,17 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jFmtDataDeNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFmtDataDeNascimentoActionPerformed
+    private void jFmtAslDataDeNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFmtAslDataDeNascimentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jFmtDataDeNascimentoActionPerformed
+    }//GEN-LAST:event_jFmtAslDataDeNascimentoActionPerformed
 
-    private void jCboNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCboNivelActionPerformed
+    private void jCboAslNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCboAslNivelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCboNivelActionPerformed
+    }//GEN-LAST:event_jCboAslNivelActionPerformed
 
-    private void jChbAtivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChbAtivoActionPerformed
+    private void jChbAslAtivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChbAslAtivoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jChbAtivoActionPerformed
+    }//GEN-LAST:event_jChbAslAtivoActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
         // TODO add your handling code here:
@@ -240,18 +241,18 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
     private javax.swing.JButton jBtnExcluir;
     private javax.swing.JButton jBtnIncluir;
     private javax.swing.JButton jBtnPesquisar;
-    private javax.swing.JComboBox<String> jCboNivel;
-    private javax.swing.JCheckBox jChbAtivo;
-    private javax.swing.JCheckBox jChbAtivo2;
-    private javax.swing.JFormattedTextField jFmtDataDeNascimento;
+    private javax.swing.JComboBox<String> jCboAslNivel;
+    private javax.swing.JCheckBox jChbAslAtivo;
+    private javax.swing.JCheckBox jChbAslAtivo2;
+    private javax.swing.JFormattedTextField jFmtAslDataDeNascimento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTxtIdUsuario;
-    private javax.swing.JTextField jTxtNome;
+    private javax.swing.JTextField jTxtAslApelido;
+    private javax.swing.JTextField jTxtAslIdUsuario;
+    private javax.swing.JTextField jTxtAslNome;
     // End of variables declaration//GEN-END:variables
 }
