@@ -42,15 +42,15 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
         jLabel6 = new javax.swing.JLabel();
         jChbAslAtivo = new javax.swing.JCheckBox();
         jChbAslAtivo2 = new javax.swing.JCheckBox();
-        jBtnIncluir = new javax.swing.JButton();
-        jBtnAlterar = new javax.swing.JButton();
-        jBtnExcluir = new javax.swing.JButton();
-        jBtnConfirmar = new javax.swing.JButton();
-        jBtnCancelar = new javax.swing.JButton();
-        jBtnPesquisar = new javax.swing.JButton();
+        jBtnAlterar1 = new javax.swing.JButton();
+        jBtnExcluir1 = new javax.swing.JButton();
+        jBtnConfirmar1 = new javax.swing.JButton();
+        jBtnCancelar1 = new javax.swing.JButton();
+        jBtnPesquisar1 = new javax.swing.JButton();
+        jBtnIncluir1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Usuários");
+        setTitle("Usuário");
 
         jLabel1.setText("ID");
 
@@ -75,24 +75,30 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
 
         jChbAslAtivo2.setText("N");
 
-        jBtnIncluir.setMnemonic('I');
-        jBtnIncluir.setText("Incluir");
+        jBtnAlterar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
+        jBtnAlterar1.setMnemonic('A');
+        jBtnAlterar1.setText("Alterar");
+        jBtnAlterar1.addActionListener(this::jBtnAlterar1ActionPerformed);
 
-        jBtnAlterar.setMnemonic('A');
-        jBtnAlterar.setText("Alterar");
-        jBtnAlterar.addActionListener(this::jBtnAlterarActionPerformed);
+        jBtnExcluir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/excluir.png"))); // NOI18N
+        jBtnExcluir1.setMnemonic('E');
+        jBtnExcluir1.setText("Excluir");
 
-        jBtnExcluir.setMnemonic('E');
-        jBtnExcluir.setText("Excluir");
+        jBtnConfirmar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
+        jBtnConfirmar1.setMnemonic('C');
+        jBtnConfirmar1.setText("Confirmar");
 
-        jBtnConfirmar.setMnemonic('C');
-        jBtnConfirmar.setText("Confirmar");
+        jBtnCancelar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
+        jBtnCancelar1.setMnemonic('X');
+        jBtnCancelar1.setText("Cancelar");
 
-        jBtnCancelar.setMnemonic('X');
-        jBtnCancelar.setText("Cancelar");
+        jBtnPesquisar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
+        jBtnPesquisar1.setMnemonic('P');
+        jBtnPesquisar1.setText("Pesquisar");
 
-        jBtnPesquisar.setMnemonic('P');
-        jBtnPesquisar.setText("Pesquisar");
+        jBtnIncluir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/add (1).png"))); // NOI18N
+        jBtnIncluir1.setMnemonic('I');
+        jBtnIncluir1.setText("Incluir");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,20 +134,22 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jChbAslAtivo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jChbAslAtivo2))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jBtnIncluir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnAlterar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnExcluir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnConfirmar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnCancelar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnPesquisar)))
+                                .addComponent(jChbAslAtivo2)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBtnIncluir1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBtnAlterar1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBtnExcluir1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBtnConfirmar1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBtnCancelar1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBtnPesquisar1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,15 +175,15 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
                     .addComponent(jCboAslNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jChbAslAtivo)
                     .addComponent(jChbAslAtivo2))
-                .addGap(34, 34, 34)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnIncluir)
-                    .addComponent(jBtnAlterar)
-                    .addComponent(jBtnExcluir)
-                    .addComponent(jBtnConfirmar)
-                    .addComponent(jBtnCancelar)
-                    .addComponent(jBtnPesquisar))
-                .addContainerGap(22, Short.MAX_VALUE))
+                    .addComponent(jBtnIncluir1)
+                    .addComponent(jBtnAlterar1)
+                    .addComponent(jBtnExcluir1)
+                    .addComponent(jBtnConfirmar1)
+                    .addComponent(jBtnCancelar1)
+                    .addComponent(jBtnPesquisar1))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
@@ -193,9 +201,9 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jChbAslAtivoActionPerformed
 
-    private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
+    private void jBtnAlterar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterar1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBtnAlterarActionPerformed
+    }//GEN-LAST:event_jBtnAlterar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,12 +243,12 @@ public class JDlgAslUsuario extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBtnAlterar;
-    private javax.swing.JButton jBtnCancelar;
-    private javax.swing.JButton jBtnConfirmar;
-    private javax.swing.JButton jBtnExcluir;
-    private javax.swing.JButton jBtnIncluir;
-    private javax.swing.JButton jBtnPesquisar;
+    private javax.swing.JButton jBtnAlterar1;
+    private javax.swing.JButton jBtnCancelar1;
+    private javax.swing.JButton jBtnConfirmar1;
+    private javax.swing.JButton jBtnExcluir1;
+    private javax.swing.JButton jBtnIncluir1;
+    private javax.swing.JButton jBtnPesquisar1;
     private javax.swing.JComboBox<String> jCboAslNivel;
     private javax.swing.JCheckBox jChbAslAtivo;
     private javax.swing.JCheckBox jChbAslAtivo2;

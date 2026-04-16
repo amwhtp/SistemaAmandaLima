@@ -67,6 +67,7 @@ public class JDlgAslFornecedor extends javax.swing.JDialog {
         jTxtAslSite = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Fornecedor");
 
         jLabel5.setText("Tipo de Fornecedor");
 
@@ -76,23 +77,28 @@ public class JDlgAslFornecedor extends javax.swing.JDialog {
 
         jLabel2.setText("Razão Social");
 
+        jBtnIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/add (1).png"))); // NOI18N
         jBtnIncluir.setMnemonic('I');
         jBtnIncluir.setText("Incluir");
 
+        jBtnAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
         jBtnAlterar.setMnemonic('A');
         jBtnAlterar.setText("Alterar");
         jBtnAlterar.addActionListener(this::jBtnAlterarActionPerformed);
 
         jLabel3.setText("E-mail");
 
+        jBtnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/excluir.png"))); // NOI18N
         jBtnExcluir.setMnemonic('E');
         jBtnExcluir.setText("Excluir");
 
+        jBtnConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
         jBtnConfirmar.setMnemonic('C');
         jBtnConfirmar.setText("Confirmar");
 
         jLabel4.setText("CNPJ");
 
+        jBtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnCancelar.setMnemonic('X');
         jBtnCancelar.setText("Cancelar");
 
@@ -103,6 +109,7 @@ public class JDlgAslFornecedor extends javax.swing.JDialog {
         }
         jFmtAslCnpj.addActionListener(this::jFmtAslCnpjActionPerformed);
 
+        jBtnPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnPesquisar.setMnemonic('P');
         jBtnPesquisar.setText("Pesquisar");
 
