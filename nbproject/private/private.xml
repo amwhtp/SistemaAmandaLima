@@ -5,8 +5,10 @@
         <group>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/sistemamandalima/SistemAmandaLima.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JFrmAslPrincipal.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslUsuario.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslCliente.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslUsuario.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslFornecedor.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslProduto.java</file>
         </group>
     </open-files>
 </project-private>
