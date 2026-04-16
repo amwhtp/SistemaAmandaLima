@@ -3,12 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/sistemamandalima/SistemAmandaLima.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JFrmAslPrincipal.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslCliente.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslUsuario.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslFornecedor.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslProduto.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslCliente.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/sistemamandalima/SistemAmandaLima.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslFornecedor.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JFrmAslPrincipal.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslVendedor.java</file>
         </group>
     </open-files>
 </project-private>
