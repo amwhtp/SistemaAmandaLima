@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -18,6 +20,57 @@ public class JDlgAslFornecedor extends javax.swing.JDialog {
     public JDlgAslFornecedor(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setTitle("Cdastro de Fornecedor");
+        setLocationRelativeTo(null);
+        desabilitar();
+    }
+    
+    public void habilitar() {
+    jTxtAslIdFornecedor.setEnabled(true);
+    jTxtAslRazaoSocial.setEnabled(true);
+    jFmtAslCnpj.setEnabled(true);
+    jCboAslTipoFornecedor.setEnabled(true);
+    jFmtAslTelefone.setEnabled(true);
+    jTxtAslEmail.setEnabled(true);
+    jFmtAslCep.setEnabled(true);
+    jTxtAslRua.setEnabled(true);
+    jTxtAslBairro.setEnabled(true);
+    jTxtAslNumero.setEnabled(true);
+    jTxtAslComplemento.setEnabled(true);
+    jTxtAslCidade.setEnabled(true);
+    jTxtAslEstado.setEnabled(true);
+    jFmtAslDataCadastro.setEnabled(true);
+    jTxtAslSite.setEnabled(true);
+    jBtnConfirmar.setEnabled(true);
+    jBtnCancelar.setEnabled(true);
+    jBtnIncluir.setEnabled(false);
+    jBtnAlterar.setEnabled(false);
+    jBtnExcluir.setEnabled(false);
+    jBtnPesquisar.setEnabled(false);
+    }
+
+public void desabilitar() {
+    jTxtAslIdFornecedor.setEnabled(false);
+    jTxtAslRazaoSocial.setEnabled(false);
+    jFmtAslCnpj.setEnabled(false);
+    jCboAslTipoFornecedor.setEnabled(false);
+    jFmtAslTelefone.setEnabled(false);
+    jTxtAslEmail.setEnabled(false);
+    jFmtAslCep.setEnabled(false);
+    jTxtAslRua.setEnabled(false);
+    jTxtAslBairro.setEnabled(false);
+    jTxtAslNumero.setEnabled(false);
+    jTxtAslComplemento.setEnabled(false);
+    jTxtAslCidade.setEnabled(false);
+    jTxtAslEstado.setEnabled(false);
+    jFmtAslDataCadastro.setEnabled(false);
+    jTxtAslSite.setEnabled(false);
+    jBtnConfirmar.setEnabled(false);
+    jBtnCancelar.setEnabled(false);
+    jBtnIncluir.setEnabled(true);
+    jBtnAlterar.setEnabled(true);
+    jBtnExcluir.setEnabled(true);
+    jBtnPesquisar.setEnabled(true);
     }
 
     /**
@@ -80,6 +133,7 @@ public class JDlgAslFornecedor extends javax.swing.JDialog {
         jBtnIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/add (1).png"))); // NOI18N
         jBtnIncluir.setMnemonic('I');
         jBtnIncluir.setText("Incluir");
+        jBtnIncluir.addActionListener(this::jBtnIncluirActionPerformed);
 
         jBtnAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
         jBtnAlterar.setMnemonic('A');
@@ -91,16 +145,19 @@ public class JDlgAslFornecedor extends javax.swing.JDialog {
         jBtnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/excluir.png"))); // NOI18N
         jBtnExcluir.setMnemonic('E');
         jBtnExcluir.setText("Excluir");
+        jBtnExcluir.addActionListener(this::jBtnExcluirActionPerformed);
 
         jBtnConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
         jBtnConfirmar.setMnemonic('C');
         jBtnConfirmar.setText("Confirmar");
+        jBtnConfirmar.addActionListener(this::jBtnConfirmarActionPerformed);
 
         jLabel4.setText("CNPJ");
 
         jBtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnCancelar.setMnemonic('X');
         jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(this::jBtnCancelarActionPerformed);
 
         try {
             jFmtAslCnpj.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###/####-##")));
@@ -112,6 +169,7 @@ public class JDlgAslFornecedor extends javax.swing.JDialog {
         jBtnPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnPesquisar.setMnemonic('P');
         jBtnPesquisar.setText("Pesquisar");
+        jBtnPesquisar.addActionListener(this::jBtnPesquisarActionPerformed);
 
         jCboAslTipoFornecedor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 - Fabricante", "2 - Distribuidor", "3 - Importador", "4 - Atacadista", " " }));
         jCboAslTipoFornecedor.addActionListener(this::jCboAslTipoFornecedorActionPerformed);
@@ -211,12 +269,13 @@ public class JDlgAslFornecedor extends javax.swing.JDialog {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jBtnAlterar)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jBtnExcluir))
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jBtnConfirmar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(jBtnExcluir)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jBtnConfirmar))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(197, 197, 197)
+                                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -317,7 +376,7 @@ public class JDlgAslFornecedor extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
-        // TODO add your handling code here:
+habilitar();        // TODO add your handling code here:
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jFmtAslCnpjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFmtAslCnpjActionPerformed
@@ -343,6 +402,26 @@ public class JDlgAslFornecedor extends javax.swing.JDialog {
     private void jFmtAslDataCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFmtAslDataCadastroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFmtAslDataCadastroActionPerformed
+
+    private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
+habilitar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnIncluirActionPerformed
+
+    private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
+desabilitar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnConfirmarActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+desabilitar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
+
+    private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
+    JOptionPane.showConfirmDialog(null, "Confirma exclusão do fornecedor?", "Selecione a opção", 0);                // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnExcluirActionPerformed
+
+    private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
+JOptionPane.showInputDialog(null, "Entre com o código do fornecedor.");        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     /**
      * @param args the command line arguments

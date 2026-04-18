@@ -17,6 +17,8 @@ public class JFrmAslPrincipal extends javax.swing.JFrame {
      */
     public JFrmAslPrincipal() {
         initComponents();
+        setTitle("Sistema de Venda de Bijuteria");
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -161,7 +163,7 @@ public class JFrmAslPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMnuProdutoActionPerformed
 
     private void jMnuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuSairActionPerformed
-        // TODO add your handling code here:
+System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jMnuSairActionPerformed
 
     /**

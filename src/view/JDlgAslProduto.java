@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -18,7 +20,45 @@ public class JDlgAslProduto extends javax.swing.JDialog {
     public JDlgAslProduto(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setTitle("Cadastro de Produto");
+        setLocationRelativeTo(null);
+        desabilitar();
     }
+    
+    
+ public void habilitar() {
+    jTxtAslIdProduto.setEnabled(true);
+    jTxtAslNome.setEnabled(true);
+    jTxtAslEstoque.setEnabled(true);
+    jCboAslTipo.setEnabled(true);
+    jTxtAslPreco.setEnabled(true);
+    jTxtAslCor.setEnabled(true);
+    jTxtAslMaterial.setEnabled(true);
+    jTxtAslDescricao.setEnabled(true);
+    jBtnConfirmar.setEnabled(true);
+    jBtnCancelar.setEnabled(true);
+    jBtnIncluir.setEnabled(false);
+    jBtnAlterar.setEnabled(false);
+    jBtnExcluir.setEnabled(false);
+    jBtnPesquisar.setEnabled(false);
+    }
+
+public void desabilitar() {
+    jTxtAslIdProduto.setEnabled(false);
+    jTxtAslNome.setEnabled(false);
+    jTxtAslEstoque.setEnabled(false);
+    jCboAslTipo.setEnabled(false);
+    jTxtAslPreco.setEnabled(false);
+    jTxtAslCor.setEnabled(false);
+    jTxtAslMaterial.setEnabled(false);
+    jTxtAslDescricao.setEnabled(false);
+    jBtnConfirmar.setEnabled(false);
+    jBtnCancelar.setEnabled(false);
+    jBtnIncluir.setEnabled(true);
+    jBtnAlterar.setEnabled(true);
+    jBtnExcluir.setEnabled(true);
+    jBtnPesquisar.setEnabled(true);
+     }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,7 +74,7 @@ public class JDlgAslProduto extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         jTxtAslEstoque = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jTxtAslPreço = new javax.swing.JTextField();
+        jTxtAslPreco = new javax.swing.JTextField();
         jCboAslTipo = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -46,12 +86,12 @@ public class JDlgAslProduto extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTxtAslDescricao = new javax.swing.JTextArea();
-        jBtnAlterar1 = new javax.swing.JButton();
-        jBtnExcluir1 = new javax.swing.JButton();
-        jBtnConfirmar1 = new javax.swing.JButton();
-        jBtnCancelar1 = new javax.swing.JButton();
-        jBtnPesquisar1 = new javax.swing.JButton();
-        jBtnIncluir1 = new javax.swing.JButton();
+        jBtnAlterar = new javax.swing.JButton();
+        jBtnExcluir = new javax.swing.JButton();
+        jBtnConfirmar = new javax.swing.JButton();
+        jBtnCancelar = new javax.swing.JButton();
+        jBtnPesquisar = new javax.swing.JButton();
+        jBtnIncluir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Produto");
@@ -79,30 +119,35 @@ public class JDlgAslProduto extends javax.swing.JDialog {
         jTxtAslDescricao.setRows(5);
         jScrollPane1.setViewportView(jTxtAslDescricao);
 
-        jBtnAlterar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
-        jBtnAlterar1.setMnemonic('A');
-        jBtnAlterar1.setText("Alterar");
-        jBtnAlterar1.addActionListener(this::jBtnAlterar1ActionPerformed);
+        jBtnAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
+        jBtnAlterar.setMnemonic('A');
+        jBtnAlterar.setText("Alterar");
+        jBtnAlterar.addActionListener(this::jBtnAlterarActionPerformed);
 
-        jBtnExcluir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/excluir.png"))); // NOI18N
-        jBtnExcluir1.setMnemonic('E');
-        jBtnExcluir1.setText("Excluir");
+        jBtnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/excluir.png"))); // NOI18N
+        jBtnExcluir.setMnemonic('E');
+        jBtnExcluir.setText("Excluir");
+        jBtnExcluir.addActionListener(this::jBtnExcluirActionPerformed);
 
-        jBtnConfirmar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
-        jBtnConfirmar1.setMnemonic('C');
-        jBtnConfirmar1.setText("Confirmar");
+        jBtnConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
+        jBtnConfirmar.setMnemonic('C');
+        jBtnConfirmar.setText("Confirmar");
+        jBtnConfirmar.addActionListener(this::jBtnConfirmarActionPerformed);
 
-        jBtnCancelar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
-        jBtnCancelar1.setMnemonic('X');
-        jBtnCancelar1.setText("Cancelar");
+        jBtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
+        jBtnCancelar.setMnemonic('X');
+        jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(this::jBtnCancelarActionPerformed);
 
-        jBtnPesquisar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
-        jBtnPesquisar1.setMnemonic('P');
-        jBtnPesquisar1.setText("Pesquisar");
+        jBtnPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
+        jBtnPesquisar.setMnemonic('P');
+        jBtnPesquisar.setText("Pesquisar");
+        jBtnPesquisar.addActionListener(this::jBtnPesquisarActionPerformed);
 
-        jBtnIncluir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/add (1).png"))); // NOI18N
-        jBtnIncluir1.setMnemonic('I');
-        jBtnIncluir1.setText("Incluir");
+        jBtnIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/add (1).png"))); // NOI18N
+        jBtnIncluir.setMnemonic('I');
+        jBtnIncluir.setText("Incluir");
+        jBtnIncluir.addActionListener(this::jBtnIncluirActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -139,7 +184,7 @@ public class JDlgAslProduto extends javax.swing.JDialog {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jCboAslTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTxtAslPreço, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTxtAslPreco, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addGap(85, 85, 85)
@@ -149,17 +194,17 @@ public class JDlgAslProduto extends javax.swing.JDialog {
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTxtAslCor, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jBtnIncluir1)
+                        .addComponent(jBtnIncluir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnAlterar1)
+                        .addComponent(jBtnAlterar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnExcluir1)
+                        .addComponent(jBtnExcluir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnConfirmar1)
+                        .addComponent(jBtnConfirmar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnCancelar1)
+                        .addComponent(jBtnCancelar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnPesquisar1)))
+                        .addComponent(jBtnPesquisar)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -182,7 +227,7 @@ public class JDlgAslProduto extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCboAslTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtAslPreço, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtAslPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTxtAslCor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -194,12 +239,12 @@ public class JDlgAslProduto extends javax.swing.JDialog {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnIncluir1)
-                    .addComponent(jBtnAlterar1)
-                    .addComponent(jBtnExcluir1)
-                    .addComponent(jBtnConfirmar1)
-                    .addComponent(jBtnCancelar1)
-                    .addComponent(jBtnPesquisar1))
+                    .addComponent(jBtnIncluir)
+                    .addComponent(jBtnAlterar)
+                    .addComponent(jBtnExcluir)
+                    .addComponent(jBtnConfirmar)
+                    .addComponent(jBtnCancelar)
+                    .addComponent(jBtnPesquisar))
                 .addGap(45, 45, 45))
         );
 
@@ -210,9 +255,29 @@ public class JDlgAslProduto extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCboAslTipoActionPerformed
 
-    private void jBtnAlterar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBtnAlterar1ActionPerformed
+    private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
+habilitar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAlterarActionPerformed
+
+    private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
+habilitar(); // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnIncluirActionPerformed
+
+    private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
+desabilitar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnConfirmarActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+desabilitar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
+
+    private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
+JOptionPane.showInputDialog(null, "Entre com o código do produto.");         // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnPesquisarActionPerformed
+
+    private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
+JOptionPane.showConfirmDialog(null, "Confirma exclusão do produto?", "Selecione a opção", 0);        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,12 +317,12 @@ public class JDlgAslProduto extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBtnAlterar1;
-    private javax.swing.JButton jBtnCancelar1;
-    private javax.swing.JButton jBtnConfirmar1;
-    private javax.swing.JButton jBtnExcluir1;
-    private javax.swing.JButton jBtnIncluir1;
-    private javax.swing.JButton jBtnPesquisar1;
+    private javax.swing.JButton jBtnAlterar;
+    private javax.swing.JButton jBtnCancelar;
+    private javax.swing.JButton jBtnConfirmar;
+    private javax.swing.JButton jBtnExcluir;
+    private javax.swing.JButton jBtnIncluir;
+    private javax.swing.JButton jBtnPesquisar;
     private javax.swing.JComboBox<String> jCboAslTipo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -274,6 +339,6 @@ public class JDlgAslProduto extends javax.swing.JDialog {
     private javax.swing.JTextField jTxtAslIdProduto;
     private javax.swing.JTextField jTxtAslMaterial;
     private javax.swing.JTextField jTxtAslNome;
-    private javax.swing.JTextField jTxtAslPreço;
+    private javax.swing.JTextField jTxtAslPreco;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -18,6 +20,41 @@ public class JDlgAslVendedor extends javax.swing.JDialog {
     public JDlgAslVendedor(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setTitle("Cadastro de Vendedor");
+        setLocationRelativeTo(null);
+        desabilitar();
+    }
+    
+    public void habilitar() {
+    jTxtAslIdVendedor.setEnabled(true);
+    jTxtAslNome.setEnabled(true);
+    jFmtAslCpf.setEnabled(true);
+    jTxtAslEmail.setEnabled(true);
+    jFmtAslTelefone.setEnabled(true);
+    jTxtAslComissao.setEnabled(true);
+    jFmtAslDataAdmissao.setEnabled(true);
+    jBtnConfirmar.setEnabled(true);
+    jBtnCancelar.setEnabled(true);
+    jBtnIncluir.setEnabled(false);
+    jBtnAlterar.setEnabled(false);
+    jBtnExcluir.setEnabled(false);
+    jBtnPesquisar.setEnabled(false);
+    }
+
+    public void desabilitar() {
+    jTxtAslIdVendedor.setEnabled(false);
+    jTxtAslNome.setEnabled(false);
+    jFmtAslCpf.setEnabled(false);
+    jTxtAslEmail.setEnabled(false);
+    jFmtAslTelefone.setEnabled(false);
+    jTxtAslComissao.setEnabled(false);
+    jFmtAslDataAdmissao.setEnabled(false);
+    jBtnConfirmar.setEnabled(false);
+    jBtnCancelar.setEnabled(false);
+    jBtnIncluir.setEnabled(true);
+    jBtnAlterar.setEnabled(true);
+    jBtnExcluir.setEnabled(true);
+    jBtnPesquisar.setEnabled(true);
     }
 
     /**
@@ -94,22 +131,27 @@ public class JDlgAslVendedor extends javax.swing.JDialog {
         jBtnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/excluir.png"))); // NOI18N
         jBtnExcluir.setMnemonic('E');
         jBtnExcluir.setText("Excluir");
+        jBtnExcluir.addActionListener(this::jBtnExcluirActionPerformed);
 
         jBtnConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
         jBtnConfirmar.setMnemonic('C');
         jBtnConfirmar.setText("Confirmar");
+        jBtnConfirmar.addActionListener(this::jBtnConfirmarActionPerformed);
 
         jBtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnCancelar.setMnemonic('X');
         jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(this::jBtnCancelarActionPerformed);
 
         jBtnPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnPesquisar.setMnemonic('P');
         jBtnPesquisar.setText("Pesquisar");
+        jBtnPesquisar.addActionListener(this::jBtnPesquisarActionPerformed);
 
         jBtnIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/add (1).png"))); // NOI18N
         jBtnIncluir.setMnemonic('I');
         jBtnIncluir.setText("Incluir");
+        jBtnIncluir.addActionListener(this::jBtnIncluirActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -213,8 +255,28 @@ public class JDlgAslVendedor extends javax.swing.JDialog {
     }//GEN-LAST:event_jTxtAslComissaoActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
-        // TODO add your handling code here:
+        habilitar();// TODO add your handling code here:
     }//GEN-LAST:event_jBtnAlterarActionPerformed
+
+    private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
+habilitar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnIncluirActionPerformed
+
+    private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
+        desabilitar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnConfirmarActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+desabilitar();        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
+
+    private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
+    JOptionPane.showInputDialog(null, "Entre com o código do vendedor.");        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnPesquisarActionPerformed
+
+    private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
+    JOptionPane.showConfirmDialog(null, "Confirma exclusão do vendedor?", "Selecione a opção", 0);        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     /**
      * @param args the command line arguments
