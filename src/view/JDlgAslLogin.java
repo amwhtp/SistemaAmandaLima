@@ -29,21 +29,96 @@ public class JDlgAslLogin extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        jTxtAslUsuario = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jBtnAslEntrar = new javax.swing.JButton();
+        jBtnAslCancelar = new javax.swing.JButton();
+        jPwdAslSenha = new javax.swing.JPasswordField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLabel2.setText("Usuário");
+
+        jTxtAslUsuario.addActionListener(this::jTxtAslUsuarioActionPerformed);
+
+        jLabel3.setText("Senha");
+
+        jBtnAslEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
+        jBtnAslEntrar.setText("Entrar");
+        jBtnAslEntrar.addActionListener(this::jBtnAslEntrarActionPerformed);
+
+        jBtnAslCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
+        jBtnAslCancelar.setText("Cancelar");
+        jBtnAslCancelar.addActionListener(this::jBtnAslCancelarActionPerformed);
+
+        jPwdAslSenha.addActionListener(this::jPwdAslSenhaActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(jBtnAslEntrar)
+                        .addGap(27, 27, 27)
+                        .addComponent(jBtnAslCancelar))
+                    .addComponent(jTxtAslUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPwdAslSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTxtAslUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPwdAslSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBtnAslEntrar)
+                    .addComponent(jBtnAslCancelar))
+                .addGap(0, 14, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTxtAslUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtAslUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTxtAslUsuarioActionPerformed
+
+    private void jBtnAslEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAslEntrarActionPerformed
+        String usuario = jTxtAslUsuario.getText();
+        String senha = new String(jPwdAslSenha.getPassword());
+        
+        if(usuario.equals("Lima" ) && senha.equals("2703")) {
+            JFrmAslPrincipal menu = new JFrmAslPrincipal();
+            menu.setVisible(true);
+            this.dispose();
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
+            jTxtAslUsuario.setText("");
+            jPwdAslSenha.setText("");
+        }
+    }//GEN-LAST:event_jBtnAslEntrarActionPerformed
+
+    private void jPwdAslSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPwdAslSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPwdAslSenhaActionPerformed
+
+    private void jBtnAslCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAslCancelarActionPerformed
+       System.exit(0);
+    }//GEN-LAST:event_jBtnAslCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -83,5 +158,11 @@ public class JDlgAslLogin extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnAslCancelar;
+    private javax.swing.JButton jBtnAslEntrar;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPasswordField jPwdAslSenha;
+    private javax.swing.JTextField jTxtAslUsuario;
     // End of variables declaration//GEN-END:variables
 }

@@ -116,4 +116,8 @@ public class AslVendedor {
     public void setAslComissao(Double aslComissao) {
         this.aslComissao = aslComissao;
     }
+
+    public String getAslCpf() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

@@ -11,7 +11,7 @@ package beans;
 public class AslComprasProduto {
     private int aslIdCompraProduto;
     private int aslIdCompra;
-    private int aslProduto;
+    private int aslIdProduto;
     private int aslQuantidade;
     private String aslLote;
     private Double aslCustoUnitario;
@@ -46,17 +46,17 @@ public class AslComprasProduto {
     }
 
     /**
-     * @return the aslProduto
+     * @return the aslIdProduto
      */
-    public int getAslProduto() {
-        return aslProduto;
+    public int getAslIdProduto() {
+        return aslIdProduto;
     }
 
     /**
      * @param aslProduto the aslProduto to set
      */
-    public void setAslProduto(int aslProduto) {
-        this.aslProduto = aslProduto;
+    public void setAslIdProduto(int aslIdProduto) {
+        this.aslIdProduto = aslIdProduto;
     }
 
     /**
