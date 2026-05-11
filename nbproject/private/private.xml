@@ -10,6 +10,26 @@
             <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JFrmAslPrincipal.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslVendedor.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslCliente.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/view/JDlgAslLogin.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/beans/AslCliente.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/beans/AslFornecedor.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/beans/AslProduto.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/beans/AslUsuarios.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/beans/AslVendedor.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/beans/AslVendas.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/beans/AslVendasProdutos.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/beans/AslCompras.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/beans/AslComprasProduto.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/dao/DaoAbstract.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/dao/DaoAslCliente.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/dao/DaoAslCompras.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/dao/DaoAslComprasProduto.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/dao/DaoAslFornecedor.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/dao/DaoAslProduto.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/dao/DaoAslVendas.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/dao/DaoAslVendasProdutos.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/dao/DaoAslUsuarios.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SistemAmandaLima/src/dao/DaoAslVendedor.java</file>
         </group>
     </open-files>
 </project-private>
